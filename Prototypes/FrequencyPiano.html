@@ -1,0 +1,60 @@
+<head>
+    <script>
+    const playSound = (frequency, duration = 700) => {
+        //Create AudioContext to create and execute audio
+        const audioCtx = new AudioContext();
+        //Create gain node to create and control volume
+        const gainNode = audioCtx.createGain();
+        //Create oscillator to provide solid tone from audio context
+        const oscillator = audioCtx.createOscillator();
+        //Set oscillator to required hertz frequency
+        oscillator.frequency.value = frequency;
+        //Connect oscillator and gain node
+        oscillator.connect(gainNode);
+        //Connect gain node to audio context to return a final audio destination node
+        gainNode.connect(audioCtx.destination);
+        //Begin playing sound immediately
+        oscillator.start(0);
+        //Stop playing sound after defined duration of milliseconds
+        setTimeout(() => oscillator.stop(), duration);
+    };
+    </script>
+    <style>
+        #w {
+            height: 200px;
+            width: 30px;
+            background-color: white;
+            padding-top: 31px;
+        }
+        #b {
+            height: 130px;
+            width: 27px;
+            background-color: black;
+            color: white;
+            vertical-align: top;
+            padding-top: 100px;
+        }
+        #piano {
+            border-style: solid;
+            width: 473px;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="piano">
+        <button id="w" onclick="playSound(261.63)">C</button>
+        <button id="b" onclick="playSound(277.18)">C#</button>
+        <button id="w" onclick="playSound(293.66)">D</button>
+        <button id="b" onclick="playSound(311.13)">D#</button>
+        <button id="w" onclick="playSound(329.63)" style="margin-right: 25px;">E</button>
+        <button id="w" onclick="playSound(349.23)">F</button>
+        <button id="b" onclick="playSound(369.99)">F#</button>
+        <button id="w" onclick="playSound(392)">G</button>
+        <button id="b" onclick="playSound(412.3)">G#</button>
+        <button id="w" onclick="playSound(440)">A</button>
+        <button id="b" onclick="playSound(466.16)">A#</button>
+        <button id="w" onclick="playSound(493.88)" style="margin-right: 25px;">B</button>
+        <button id="w" onclick="playSound(523.25)">C</button>
+    </div>
+</body>
