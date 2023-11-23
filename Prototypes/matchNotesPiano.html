@@ -1,0 +1,181 @@
+<head>
+    <script>
+        //Function to play sound with specified frequency and duration
+        const playSound = (frequency, duration = 700) => {
+            //Create AudioContext to create and execute audio
+            const audioCtx = new AudioContext();
+            //Create gain node to create and control volume
+            const gainNode = audioCtx.createGain();
+            //Create oscillator to provide solid tone from audio context
+            const oscillator = audioCtx.createOscillator();
+            //Set oscillator to required hertz frequency
+            oscillator.frequency.value = frequency;
+            //Connect oscillator and gain node
+            oscillator.connect(gainNode);
+            //Connect gain node to audio context to return a final audio destination node
+            gainNode.connect(audioCtx.destination);
+            //Begin playing sound immediately
+            oscillator.start(0);
+            //Stop playing sound after defined duration of milliseconds
+            setTimeout(() => oscillator.stop(), duration);
+        };
+
+        //Array of notes with frequencies and note names
+        const notes = [
+            { frequency: 261.63, name: "C" },
+            { frequency: 277.18, name: "C#" },
+            { frequency: 293.66, name: "D" },
+            { frequency: 311.13, name: "D#" },
+            { frequency: 329.63, name: "E" },
+            { frequency: 349.23, name: "F" },
+            { frequency: 369.99, name: "F#" },
+            { frequency: 392, name: "G" },
+            { frequency: 412.3, name: "G#" },
+            { frequency: 440, name: "A" },
+            { frequency: 466.16, name: "A#" },
+            { frequency: 493.88, name: "B" },
+            { frequency: 523.25, name: "C" },
+        ];
+
+        //Store current randomly generated note variable
+        let currentRandomNote = null;
+
+        //Function to get random note from note array  
+        const getRandomNote = () => {
+            return notes[Math.floor(Math.random() * notes.length)];
+        };
+
+        //Track whether "Play This Note!" button is enabled, initialised true
+        let isButtonEnabled = true;
+
+        //Store user score, initialised as 0
+        let score = 0;
+
+        //Get random note function
+        const playThisNoteBtn = () => {
+            //Check button status
+            if (!isButtonEnabled) {
+                return; //Do nothing if button is disabled
+            }
+            //Get button by ID
+            const getNoteBtn = document.getElementById("clickRandNote");
+            //Disable button
+            getNoteBtn.disabled = true;
+            isButtonEnabled = false;
+
+            //Generate random note
+            currentRandomNote = getRandomNote();
+            //Display note on screen
+            document.getElementById("note").innerHTML = `${currentRandomNote.name}`;
+            //Play required note for 0.5 seconds
+            playSound(currentRandomNote.frequency, 500);
+
+            //Clear feedback element for next note, leaving empty space
+            document.getElementById("feedback").innerHTML = `<br>`;
+        };
+
+        //Check note played by user function
+        const checkNote = (pressedKey) => {
+            //Get elements to display feedback and update score
+            const feedbackElement = document.getElementById("feedback");
+            const scoreElement = document.getElementById("score");
+
+            //Check user input vs required note, feedback appropriately
+            if (pressedKey == currentRandomNote.name) {
+                feedbackElement.innerHTML = "Correct! Well done!";
+                //Increment score if correct
+                score += 1;
+            } else {
+                feedbackElement.innerHTML = `Incorrect. You played ${pressedKey}`;
+            }
+
+            //Update scoreboard
+            scoreElement.innerHTML = `Score: ${score}`;
+            //Enable button after checking note
+            document.getElementById("clickRandNote").disabled = false;
+            isButtonEnabled = true;
+            //Reset current note after checking
+            currentRandomNote = null;
+        };
+    </script>
+    <style>
+        #piano { /*Piano size*/
+            display: flex;
+            width: 66%;
+            margin-left: 17%;
+        }
+
+        .whiteKey,
+        .blackKey { /*Piano keys shadows, borders*/
+            cursor: pointer;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            border-width: 1px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .whiteKey:hover { /*Key hover colours*/
+            background-color: #f4f4f4;
+        }
+        .blackKey:hover {
+            background-color: #2b2b2b;
+        }
+
+        .whiteKey { /*Key sizes, colours*/
+            flex: 1;
+            height: 350px;
+            background-color: white;
+        }
+        .blackKey {
+            flex: 0 0 70px;
+            height: 230px;
+            background-color: black;
+            margin: 0 -35px; /*Margin gives overlap*/
+            z-index: 1; /*Black keys on top of white keys*/
+        }
+
+        #displayContainer { /*Center elements under piano*/
+            text-align: center;
+            margin-top: 3%;
+        }
+        #clickRandNote { /*Note button*/
+            cursor: pointer;
+            border-radius: 10px;
+            border-width: 1px;
+            padding: 20px;
+            text-align: center;
+        }
+        body { /*Font*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Piano with key buttons-->
+    <div id="piano">
+        <button class="whiteKey" onclick="playSound(261.63); checkNote('C')"></button>
+        <button class="blackKey" onclick="playSound(277.18); checkNote('C#')"></button>
+        <button class="whiteKey" onclick="playSound(293.66); checkNote('D')"></button>
+        <button class="blackKey" onclick="playSound(311.13); checkNote('D#')"></button>
+        <button class="whiteKey" onclick="playSound(329.63); checkNote('E')"></button>
+        <button class="whiteKey" onclick="playSound(349.23); checkNote('F')"></button>
+        <button class="blackKey" onclick="playSound(369.99); checkNote('F#')"></button>
+        <button class="whiteKey" onclick="playSound(392); checkNote('G')"></button>
+        <button class="blackKey" onclick="playSound(412.3); checkNote('G#')"></button>
+        <button class="whiteKey" onclick="playSound(440); checkNote('A')"></button>
+        <button class="blackKey" onclick="playSound(466.16); checkNote('A#')"></button>
+        <button class="whiteKey" onclick="playSound(493.88); checkNote('B')"></button>
+        <button class="whiteKey" onclick="playSound(523.25); checkNote('C')"></button>
+    </div>
+
+    <!--Random note button, note to play, feedback, score-->
+    <div id="displayContainer">
+        <button id="clickRandNote" onclick="playThisNoteBtn()">
+            Play This Note!
+        </button>
+
+        <p id="note"><br></p>
+        <p id="feedback"><br></p>
+        <p id="score">Score: 0</p>
+    </div>
+</body>
