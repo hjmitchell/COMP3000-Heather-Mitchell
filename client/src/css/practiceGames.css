@@ -1,0 +1,147 @@
+body { /*Font*/
+    font-family: 'Rethink Sans', sans-serif;
+}
+
+/*NOTATION VALUES*/
+#displayContainer2 { /*Container to center content after table*/
+    text-align: center;
+    font-family: 'Rethink Sans', sans-serif;
+    width: 70%;
+}
+
+.centerTxt { /*Center text*/
+    text-align: center;
+}
+.mt-20 { /*Margin and font*/
+    margin-top: 20px;
+    font-family: 'Rethink Sans', sans-serif;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.tb { /*Table styling*/
+    margin-left: 15%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: solid #fff 1px;
+    font-family: 'Rethink Sans', sans-serif;
+    width: 70% !important;
+
+}
+.clickable { /*Mouse cursor*/
+    cursor: pointer;
+}
+
+.bar { /*Horizonal line in table row 2*/
+    text-align: center;
+    border-bottom: 2px solid #000;
+    line-height: 1px !important;
+    padding-top: 10px;
+}
+.bar span { /*Text gaps on line*/
+    background: #fff;
+    padding: 0 10px;
+}
+
+.center { /*Center table images*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h30 { /*Set height to 30px*/
+    height: 30px;
+}
+
+.multipleImgs img { /*For multiple images per table cell*/
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 30px;
+}
+.multipleImgs {
+    width: 25%;
+    text-align: center;
+}
+
+.customBtn { /*Button size and colours*/
+    width: 200px;
+    height: 50px;
+    border-radius: 15px !important;
+}
+#startSoundBtn {
+    background-color: #beabf4;    
+    font-family: 'Rethink Sans', sans-serif;
+}
+#startSoundBtn:hover {
+    background-color: #95788a !important;
+}
+
+#score { /*Score alignment and colour*/
+    float: left;
+    margin-right: 10px;
+}
+#greenScore {
+    color: #0d9f00;
+    font-weight:bold;
+    text-align: left;
+}
+
+
+/*NOTE NAMES*/
+#piano { /*Piano size*/
+    display: flex;
+    justify-content: center;
+}
+
+.whiteKey,
+.blackKey { /*Piano keys shadows, borders*/
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    border-radius: 0 0 10px 10px;
+}
+
+.whiteKey:hover { /*Key hover colours*/
+    background-color: #f4f4f4;
+}
+.blackKey:hover {
+    background-color: #2b2b2b;
+}
+
+.whiteKey { /*Key sizes, colours*/
+    flex: 0 0 80px;
+    height: 250px;
+    background-color: white;
+}
+.blackKey {
+    flex: 0 0 60px;
+    height: 160px;
+    background-color: black;
+    margin: 0 -30px; /*Margin gives overlap*/
+    z-index: 1; /*Black keys on top of white keys*/
+}
+
+#displayContainer { /*Center elements under piano*/
+    text-align: center;
+    width: 50%;
+    font-family: 'Rethink Sans', sans-serif;
+}
+#clickRandNote { /*Note button*/
+    cursor: pointer;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    background-color: #beabf4;    
+    font-family: 'Rethink Sans', sans-serif;
+}
+#clickRandNote:hover {
+    background-color: #95788a !important;
+}
+
+#note {
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 1%;
+}

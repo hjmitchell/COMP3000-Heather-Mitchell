@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>PianoStudio</title>
+    <!--Favicon, stylesheets, scripts-->
+    <link rel="shortcut icon" type="image/png" href="../../public/assets/grand-piano.png" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/frequency.css">
+    <script src="../js/scripts.js"></script>
+    <!--Bootstrap CSS and JS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Fonts-->
+    <link href="https://fonts.cdnfonts.com/css/the-juke-box" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div id="navbar-container"></div>
+    <!--Piano container-->
+    <div class="containerPiano">
+        <div class="background">
+            <!--Title-->
+            <h1 class="mb-20">Frequency Piano</h1>
+            
+            <!--Piano-->
+            <div id="piano">
+                <button class="whiteKey key" onclick="playSound(261.63)">C</button>
+                <button class="blackKey key" onclick="playSound(277.18)">C#</button>
+                <button class="whiteKey key" onclick="playSound(293.66)">D</button>
+                <button class="blackKey key" onclick="playSound(311.13)">D#</button>
+                <button class="whiteKey key" onclick="playSound(329.63)">E</button>
+                <button class="whiteKey key" onclick="playSound(349.23)">F</button>
+                <button class="blackKey key" onclick="playSound(369.99)">F#</button>
+                <button class="whiteKey key" onclick="playSound(392)">G</button>
+                <button class="blackKey key" onclick="playSound(412.3)">G#</button>
+                <button class="whiteKey key" onclick="playSound(440)">A</button>
+                <button class="blackKey key" onclick="playSound(466.16)">A#</button>
+                <button class="whiteKey key" onclick="playSound(493.88)">B</button>
+                <button class="whiteKey key" onclick="playSound(523.25)">C</button>
+            </div>
+            <!--Text-->
+            <div class="center-wrapper mt-30">
+                <p>The frequency piano is mouse and touchscreen enabled, and plays notes
+                    via frequencies.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/frequencyPianoScript.js"></script>
+</body>
+
+</html>

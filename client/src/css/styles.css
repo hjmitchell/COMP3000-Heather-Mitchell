@@ -1,0 +1,226 @@
+body {
+    max-width: 100%;
+    background-color: #fbfaff !important;
+    font-family: 'Rethink Sans', sans-serif !important;
+    margin: 0;
+}
+
+/*Navbar*/
+.title {
+    /*Piano Studio title*/
+    font-family: 'The Juke Box', sans-serif;
+    font-size: 50px !important;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logo {
+    /*Center logo*/
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+}
+
+ul, li {
+    /*Remove margin/padding for navbar*/
+    margin: 0px;
+    padding: 0px;
+}
+.navContainer {
+    /*Container on left, full height*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 11%;
+    background: #c1b4e2;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+}
+.navContainer li a,
+.navHeader {
+    /*Text styles*/
+    padding: 7px 10px;
+    display: block;
+    color: #2D1674;
+    text-decoration: none;
+}
+.navHeader {
+    margin-bottom: 30px;
+}
+
+.navContainer li:hover > a {
+    background-color: #cfc4ed;
+}
+
+.navContainer li {
+    /*Dropdown position*/
+    position: relative;
+}
+
+
+
+.navContainer li ul.navDropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 225px;
+    list-style: none;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+    clip-path: inset(-10px -10px -10px 0px);
+}
+.navContainer li ul.dropUp {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 225px;
+    list-style: none;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+    clip-path: inset(-10px -10px -10px 0px);
+}
+
+.navContainer li:hover ul {
+    /*Dropdown show on hover*/
+    display: block;
+    background-color: #cfc4ed;
+}
+.navContainer li ul li a:hover {
+    /*Dropdown hover*/
+    background-color: #d8cfef;
+}
+.logInBtn {
+    float: right;
+    padding-left: 12px;
+    padding-top: 1px;
+    width: 80px;
+    height: 35px;
+    background-color: #beabf4;
+    border: none;
+    border-radius: 0 0 0 12px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+    color: #2D1674;
+}
+.logInBtn:hover {
+    background-color: #c1b4e2;
+}
+
+
+/*Research*/
+h1,
+h6 {
+    text-align: center;
+}
+
+.contents-menu {
+    margin-left: 20px;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.summary {
+    font-weight: 500;
+}
+
+.indent {
+    text-indent: 70px;
+}
+
+.blockquote-footer {
+    font-style: italic;
+    font-size: 15px !important;
+    font-weight: 300;
+}
+
+.articleName {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.twoLinesBottom {
+    margin-top: 0px;
+}
+
+.twoLinesTop {
+    margin-bottom: 0px;
+}
+
+.researchText {
+    margin: 50px;
+}
+
+.imgContainer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+
+/*Log in*/
+.loginContainer {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    background-image: url('../../public/assets/pianoLoginBG.jpg');
+    background-size: 100% 140%;
+    min-height: 85.6vh;
+}
+
+.loginFormContainer {
+    background-color: #fbfaffcd;
+    padding: 20px;
+    margin: 8px 5px 5px 10px;
+    border-radius: 10px 0px 0px 10px;
+    height: 83vh;
+    width: 40%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#loginForm {
+    margin-top: 40px;
+}
+
+.loginFormContainer label {
+    display: block;
+    color: #2D1674;
+    margin: 30px 10px 10px 15%;
+}
+
+.loginFormContainer input {
+    width: 70%;
+    padding: 8px;
+    box-sizing: border-box;
+    display: block;
+    margin: 10px auto 10px auto;
+}
+
+.loginFormContainer button {
+    background-color: #beabf4;
+    color: #ffffff;
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 50px auto 0 auto;
+    transition: background-color 0.6s;
+}
+
+.loginFormContainer button:hover {
+    background-color: #95788a;
+}

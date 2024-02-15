@@ -1,0 +1,144 @@
+/*FREQUENCY DETECTOR*/
+.containerFreq { /*Container for content*/
+    text-align: center;
+    width: 100%;
+    background-image: url('../../public/assets/pianoBGBlur.png') !important;
+    background-size: 100% 120%;
+    min-height: 85.6vh;
+}
+.freqDet {
+    display: block;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
+    width: 60%;
+    background-color: #e2d9ffbe;
+    padding: 30px 0px 15px 0px;
+}
+
+.mt-20 { /*Margin styles*/
+    margin-top: 20px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+
+.customBtn { /*Start/stop button styling*/
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#startBtn { /*Start/stop btn colour*/
+    background-color: #beabf4;
+}
+#stopBtn {
+    background-color: #95788a;
+}
+
+.center-wrapper { /*Center div*/
+    display: flex;
+    justify-content: center;
+}
+.detected { /*Align text left in centered wrapper*/
+    text-align: left;
+}
+
+.txt { /*Text margins*/
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+#frequencyValue, #noteValue { /*Text colour*/
+    color: #0d9f00;
+    font-weight:bold;
+}
+
+
+/*FREQUENCY PIANO*/
+.containerPiano {
+    width: 100%;
+    background-image: url('../../public/assets/pianoBGBlur.png') !important;
+    background-size: 100% 120%;
+    min-height: 85.6vh;
+}
+.background {
+    display: block;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
+    width: 60%;
+    background-color: #e2d9ffbe;
+    padding: 30px 0px 20px 0px;
+    min-height: 84.5vh;
+}
+#piano { /*Piano size*/
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.whiteKey,
+.blackKey { /*Piano keys shadows, borders*/
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    border-radius: 0 0 10px 10px;
+}
+
+.whiteKey:hover { /*Key hover colours*/
+    background-color: #f4f4f4;
+}
+.blackKey:hover {
+    background-color: #2b2b2b;
+}
+
+.whiteKey { /*Key sizes, colours*/
+    flex: 0 0 80px;
+    height: 250px;
+    background-color: white;
+}
+.blackKey {
+    flex: 0 0 60px;
+    height: 160px;
+    background-color: black;
+    color: white;
+    margin: 0 -30px; /*Margin gives overlap*/
+    z-index: 1; /*Black keys on top of white keys*/
+}
+.blackKey::before {
+    content: "";
+    display: inline-block;
+    height: 140px;
+}
+.whiteKey::before {
+    content: "";
+    display: inline-block;
+    height: 200px;
+}
+
+
+/*FREQUENCY GENERATOR*/
+h1 {
+    font-family: 'Rethink Sans', sans-serif;
+}
+.freqGenContainer {
+    text-align: center;
+    margin-top: 40px;
+}
+.customBtn2 {
+    width: 400px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#sineBtn { /*Sine btn colour*/
+    background-color: #beabf4 !important;
+    font-family: 'Rethink Sans', sans-serif;
+}
+#sineBtn:hover {
+    background-color: #95788a !important;
+}

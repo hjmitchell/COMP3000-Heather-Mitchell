@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="navContainer">
+            <!--Logo and Title-->
+            <img src="../../public/assets/pslogotransparent.png" alt="" width="50" class="logo"/>
+            <a class="title" href="./index.html">PianoStudio</a>
+            
+            <!--Nav Links-->
+            <li><a class="navHeader" href="./index.html">Home</a></li>
+            <li><a class="navHeader" href="./research.html">Research</a></li>
+
+            <li><a class="navHeader">Frequency</a>
+                <ul class="dropdown navDropdown">
+                    <li><a href="./frequencyDetector.html">Frequency & Note Detector</a></li>
+                    <li><a href="./frequencyPiano.html">Frequency Piano</a></li>
+                    <li><a href="./frequencyGenerator.html">Frequency Generator</a></li>
+                </ul>
+            </li>
+            <li><a class="navHeader">Practice Games</a>
+                <ul class="dropdown navDropdown">
+                    <li><a href="./notationValues.html">Notation Values</a></li>
+                    <li><a href="./noteNames.html">Note Names</a></li>
+                </ul>
+            </li>
+            <li><a class="navHeader">Practice Tools</a>
+                <ul class="dropdown dropUp">
+                    <li><a href="./calendar.html">Calendar</a></li>
+                    <li><a href="./sheetMusicCreator.html">Sheet Music Creator</a></li>
+                    <li><a href="./sheetMusicPlayer.html">Sheet Music Player</a></li>
+                    <li><a href="./myPracticeLog.html">My Practice Log</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div>
+        <!--Sign in-->
+        <button class="logInBtn" type="submit" onclick="location.href='/src/html/login.html'">
+            Sign in
+        </button>
+    </div>
+</body>
+
+</html>

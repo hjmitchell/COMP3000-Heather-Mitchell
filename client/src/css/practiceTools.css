@@ -1,0 +1,152 @@
+/*CALENDAR*/
+body {
+    /*Font and margin*/
+    font-family: 'Rethink Sans', sans-serif;
+    margin: 0px;
+}
+
+#container {
+    /*Calendar container*/
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    padding-bottom:30px;
+    padding-top: 30px;
+}
+
+.navigateMonths {
+    /*Center header - navigation and title*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.navBtn {
+    /*Navigation btns*/
+    font-size: x-large;
+    background-color: #ffffff00;
+    border: none;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+}
+
+.navBtn:hover {
+    background-color: #beabf4;
+}
+
+table {
+    /*Calendar table*/
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 14px;
+}
+
+th {
+    background-color: #beabf4;
+}
+
+td:not(:empty) {
+    cursor: pointer;
+}
+
+td:not(:empty, .clicked):hover {
+    /*Calendar date hover*/
+    background-color: #f0f0f0;
+    transition-duration: 0.4s;
+    border-radius: 0px;
+}
+
+td.clicked {
+    /*Calendar date click*/
+    background-color: #95788a;
+    transition-duration: 0.4s;
+    color: white;
+    border-radius: 0px;
+}
+
+#wrapper {
+    /*Flexbox container - events + calendar*/
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+    min-height: 85.6vh;
+}
+
+#eventContainer {
+    /*Events container*/
+    text-align: center;
+    width: 40%;
+    background-color: #dcd3f5;
+    padding-top: 30px;
+}
+
+.eventHeader,
+#currentMonth {
+    /*Headers text style*/
+    text-align: center;
+    font-size: large;
+    margin: 0px;
+    padding: 10px;
+}
+
+.eventInput {
+    margin-top: 5px;
+}
+
+#eventTitle,
+#eventTime,
+#eventDuration {
+    /*Event input boxes*/
+    height: 30px;
+    margin-left: 5px;
+    font-family: 'Rethink Sans', sans-serif;
+
+}
+
+#eventTitle {
+    width: 70%;
+    margin-right: 15px;
+}
+
+#eventTime {
+    width: 17%;
+    margin-right: 15px;
+}
+
+#eventDuration {
+    width: 10%;
+}
+.grey {
+    text-decoration:none !important;
+    color: black;
+}
+
+#addBtn {
+    width: 80px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #a490db;
+    color: white;
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+#eventDetails {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.eventPresent {
+    /*Change date colour if has event*/
+    height: 10px;
+    background-color: #e6e1f9;
+    border-radius: 20px;
+}
