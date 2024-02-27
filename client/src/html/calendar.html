@@ -21,65 +21,67 @@
 <body>
     <!--Navbar-->
     <div id="navbar-container"></div>
+    
+    <div class="containerBG">
+        <div class="background">
+            <div id="wrapper">
+                <div id="eventContainer">
+                    <!--Title-->
+                    <h1>Calendar</h1>
+                    <p class="eventHeader">Add new lesson</p>
+                    <div class="eventInput">
+                        <!--Event title input-->
+                        Title:
+                        <input type="text" id="eventTitle">
+                    </div>
+                    <div class="eventInput">
+                        <!--Event time input-->
+                        Time:
+                        <input type="time" id="eventTime">
+                        <!--Event duration input-->
+                        Duration:
+                        <input type="number" id="eventDuration" min="0" value="30" step="5">
+                        <a class="grey">minutes</a>
+                    </div>
+                    <div class="eventInput">
+                        <!--Add event btn-->
+                        <button id="addBtn">Add</button>
+                    </div>
 
-    <div id="wrapper">
-        <div id="eventContainer">
-            <!--Title-->
-            <h1>Calendar</h1>
+                    <!--Events inserted dynamically-->
+                    <div id="eventDetails"></div>
+                </div>
 
-            <p class="eventHeader">Add new lesson</p>
-            <div class="eventInput">
-                <!--Event title input-->
-                Title:
-                <input type="text" id="eventTitle">
+                <div id="container">
+                    <div class="navigateMonths">
+                        <!--Previous month btn-->
+                        <button onclick="prevMonth()" class="navBtn">
+                            < </button>
+                                <!--Display current month/year title-->
+                                <span id="currentMonth"></span>
+                                <!--Next month btn-->
+                                <button onclick="nextMonth()" class="navBtn">></button>
+                    </div>
+
+                    <table id="calendar">
+                        <thead>
+                            <tr>
+                                <!--Days of the week-->
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                                <th>Sun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--Dates inserted dynamically-->
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="eventInput">
-                <!--Event time input-->
-                Time:
-                <input type="time" id="eventTime">
-                <!--Event duration input-->
-                Duration:
-                <input type="number" id="eventDuration" min="0" value="30" step="5">
-                <a class="grey">minutes</a>
-            </div>
-            <div class="eventInput">
-                <!--Add event btn-->
-                <button id="addBtn">Add</button>
-            </div>
-
-            <!--Events inserted dynamically-->
-            <div id="eventDetails"></div>
-        </div>
-
-        <div id="container">
-            <div class="navigateMonths">
-                <!--Previous month btn-->
-                <button onclick="prevMonth()" class="navBtn">
-                    <
-                </button>
-                <!--Display current month/year title-->
-                <span id="currentMonth"></span>
-                <!--Next month btn-->
-                <button onclick="nextMonth()" class="navBtn">></button>
-            </div>
-
-            <table id="calendar">
-                <thead>
-                    <tr>
-                        <!--Days of the week-->
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                        <th>Sun</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--Dates inserted dynamically-->
-                </tbody>
-            </table>
         </div>
     </div>
 

@@ -2,30 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>PianoStudio</title>
-    <!--Favicon, stylesheets-->
-    <link rel="shortcut icon" type="image/png" href="../../public/assets/grand-piano.png" />
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <link rel="stylesheet" type="text/css" href="../css/practiceGames.css" />
-    <!--Bootstrap CSS and JS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!--Fonts-->
-    <link href="https://fonts.cdnfonts.com/css/the-juke-box" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>PianoStudio</title>
+  <!--Favicon, stylesheets-->
+  <link rel="shortcut icon" type="image/png" href="../../public/assets/grand-piano.png" />
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/practiceGames.css" />
+  <!--Bootstrap CSS and JS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Fonts-->
+  <link href="https://fonts.cdnfonts.com/css/the-juke-box" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--Navbar-->
-    <div id="navbar-container"></div>
+  <!--Navbar-->
+  <div id="navbar-container"></div>
 
-    <!--Title-->
-    <h1 class="mt-20 mb-20">Note Names</h1>
+  <div class="containerBG">
+    <div class="background">
+      <!--Title-->
+      <h1 class="mb-20">Note Names</h1>
 
-    <!--Piano with key buttons-->
-    <div id="piano">
+      <!--Piano with key buttons-->
+      <div id="piano">
         <button class="whiteKey" onclick="playSound(261.63); checkNote('C')"></button>
         <button class="blackKey" onclick="playSound(277.18); checkNote('C#')"></button>
         <button class="whiteKey" onclick="playSound(293.66); checkNote('D')"></button>
@@ -39,36 +41,38 @@
         <button class="blackKey" onclick="playSound(466.16); checkNote('A#')"></button>
         <button class="whiteKey" onclick="playSound(493.88); checkNote('B')"></button>
         <button class="whiteKey" onclick="playSound(523.25); checkNote('C')"></button>
-    </div>
+      </div>
 
-    <!--Random note button, note to play, feedback, score-->
-    <div id="displayContainer" class="container mt-3">
+      <!--Random note button, note to play, feedback, score-->
+      <div id="displayContainer" class="container mt-3">
         <div class="row">
           <!-- Score on the left -->
           <div class="col-md-4">
             <p id="score">Score:</p>
             <p id="greenScore">0</p>
           </div>
-      
+
           <!-- Button to display random note in the middle -->
           <div class="col-md-4 text-center">
             <button type="button" class="btn customBtn" id="clickRandNote" onclick="playThisNoteBtn()">
               Play This Note!
             </button>
           </div>
-      
+
           <!-- Other content on the right -->
           <div class="col-md-4 text-end">
             <p id="feedback"></p>
           </div>
         </div>
-      
+
         <!-- Note under the button -->
         <p id="note"><br></p>
       </div>
+    </div>
+  </div>
 
-    <script src="../js/scripts.js"></script>
-    <script src="../js/noteNamesScript.js"></script>
+  <script src="../js/scripts.js"></script>
+  <script src="../js/noteNamesScript.js"></script>
 </body>
 
 </html>

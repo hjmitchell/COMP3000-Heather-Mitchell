@@ -1,20 +1,27 @@
 /*FREQUENCY DETECTOR*/
-.containerFreq { /*Container for content*/
-    text-align: center;
+.containerBG { /*Container for content*/
+    flex: 1;
+    display: flex;
+    position: absolute;
+    z-index: -1;
     width: 100%;
+    height: 100vh;
+    text-align: center;
     background-image: url('../../public/assets/pianoBGBlur.png') !important;
-    background-size: 100% 120%;
-    min-height: 85.6vh;
+    background-size: 100% 140%;
+    padding-left: 10%;
 }
 .freqDet {
     display: block;
-    margin: auto;
+    margin: 0 auto auto auto;
     border-radius: 0 0 20px 20px;
     width: 60%;
-    background-color: #e2d9ffbe;
+    background-color: #ebf2f2c1;
     padding: 30px 0px 15px 0px;
 }
-
+.titleText {
+    margin-bottom: 25px;
+}
 .mt-20 { /*Margin styles*/
     margin-top: 20px;
 }
@@ -33,15 +40,20 @@
     margin-bottom: 15px;
 }
 #startBtn { /*Start/stop btn colour*/
-    background-color: #beabf4;
+    background-color: #bfd6d6;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 #stopBtn {
-    background-color: #95788a;
+    background-color: #95b5b5;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .center-wrapper { /*Center div*/
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
 .detected { /*Align text left in centered wrapper*/
     text-align: left;
@@ -49,7 +61,7 @@
 
 .txt { /*Text margins*/
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 #frequencyValue, #noteValue { /*Text colour*/
     color: #0d9f00;
@@ -58,24 +70,30 @@
 
 
 /*FREQUENCY PIANO*/
-.containerPiano {
+.containerBG {
+    flex: 1;
+    display: flex;
+    position: absolute;
+    z-index: -1;
     width: 100%;
+    height: 100vh;
+    text-align: center;
     background-image: url('../../public/assets/pianoBGBlur.png') !important;
-    background-size: 100% 120%;
-    min-height: 85.6vh;
+    background-size: 100% 140%;
+    padding-left: 10%;
 }
 .background {
     display: block;
-    margin: auto;
+    margin: 0 auto auto auto;
     border-radius: 0 0 20px 20px;
-    width: 60%;
-    background-color: #e2d9ffbe;
-    padding: 30px 0px 20px 0px;
-    min-height: 84.5vh;
+    width: 65%;
+    background-color: #ebf2f2c1;
+    padding: 30px 0px 15px 0px;
 }
 #piano { /*Piano size*/
     display: flex;
     justify-content: center;
+    margin-top: 65px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -118,6 +136,10 @@
     display: inline-block;
     height: 200px;
 }
+.pianoText {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 
 
 /*FREQUENCY GENERATOR*/
@@ -127,18 +149,20 @@ h1 {
 .freqGenContainer {
     text-align: center;
     margin-top: 40px;
+    padding-top: 35px;
+    padding-bottom: 120px;
 }
 .customBtn2 {
     width: 400px;
     height: 50px;
     border-radius: 15px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 55px;
 }
 #sineBtn { /*Sine btn colour*/
-    background-color: #beabf4 !important;
+    background-color: #bfd6d6 !important;
     font-family: 'Rethink Sans', sans-serif;
 }
 #sineBtn:hover {
-    background-color: #95788a !important;
+    background-color: #95b5b5 !important;
 }

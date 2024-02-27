@@ -3,10 +3,34 @@ body { /*Font*/
 }
 
 /*NOTATION VALUES*/
+.containerBG { /*Container for content*/
+    flex: 1;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-image: url('../../public/assets/pianoBGBlur.png') !important;
+    background-size: 100% 140%;
+    padding-left: 10%;
+}
+
+.background {
+    display: block;
+    margin: 0 auto auto auto;
+    border-radius: 0 0 20px 20px;
+    width: 70%;
+    background-color: #ebf2f2c1;
+    padding: 30px 0px 15px 0px;
+}
+
 #displayContainer2 { /*Container to center content after table*/
     text-align: center;
     font-family: 'Rethink Sans', sans-serif;
     width: 70%;
+    padding-top: 25px;
+    padding-bottom: 30px;
 }
 
 .centerTxt { /*Center text*/
@@ -21,15 +45,15 @@ body { /*Font*/
 }
 
 .tb { /*Table styling*/
-    margin-left: 15%;
+    margin-left: 5%;
     border-collapse: collapse;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
     border: solid #fff 1px;
     font-family: 'Rethink Sans', sans-serif;
-    width: 70% !important;
-
+    width: 90% !important;
+    margin-top: 30px;
 }
 .clickable { /*Mouse cursor*/
     cursor: pointer;
@@ -71,11 +95,11 @@ body { /*Font*/
     border-radius: 15px !important;
 }
 #startSoundBtn {
-    background-color: #beabf4;    
+    background-color: #bfd6d6;    
     font-family: 'Rethink Sans', sans-serif;
 }
 #startSoundBtn:hover {
-    background-color: #95788a !important;
+    background-color: #95b5b5 !important;
 }
 
 #score { /*Score alignment and colour*/
@@ -93,6 +117,7 @@ body { /*Font*/
 #piano { /*Piano size*/
     display: flex;
     justify-content: center;
+    padding-top: 40px;
 }
 
 .whiteKey,
@@ -127,17 +152,18 @@ body { /*Font*/
     text-align: center;
     width: 50%;
     font-family: 'Rethink Sans', sans-serif;
+    padding-top: 20px;
 }
 #clickRandNote { /*Note button*/
     cursor: pointer;
     text-align: center;
     height: 50px;
     width: 200px;
-    background-color: #beabf4;    
+    background-color: #bfd6d6;    
     font-family: 'Rethink Sans', sans-serif;
 }
 #clickRandNote:hover {
-    background-color: #95788a !important;
+    background-color: #95b5b5 !important;
 }
 
 #note {

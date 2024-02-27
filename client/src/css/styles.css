@@ -2,7 +2,7 @@ body {
     max-width: 100%;
     background-color: #fbfaff !important;
     font-family: 'Rethink Sans', sans-serif !important;
-    margin: 0;
+    margin: 0 !important;
 }
 
 /*Navbar*/
@@ -52,6 +52,7 @@ ul, li {
 
 .navContainer li:hover > a {
     background-color: #cadada;
+
 }
 
 .navContainer li {
@@ -107,6 +108,15 @@ ul, li {
 
 
 /*Research*/
+#bg {
+    background-color: #faffff;
+    position: absolute;
+    width: 100%;
+    padding-left: 10%;
+}
+.researchTitle {
+    padding-left: 6%;
+}
 h1,
 h6, h3 {
     text-align: center;

@@ -22,22 +22,26 @@
     <!--Navbar-->
     <div id="navbar-container"></div>
 
-    <!--Title-->
-    <h1 class="mt-20">Frequency Generator</h1>
+    <div class="containerBG">
+        <div class="background">
+            <!--Title-->
+            <h1 class="mt-20">Frequency Generator</h1>
 
-    <!--Play sine wave button-->
-    <div class="freqGenContainer">
-        <button type="button" id="sineBtn" class="btn customBtn2" onclick="playSound(440, 1000)">
-            Play sine wave 440 hz frequency
-        </button>
+            <!--Play sine wave button-->
+            <div class="freqGenContainer">
+                <button type="button" id="sineBtn" class="btn customBtn2" onclick="playSound(440, 1000)">
+                    Play sine wave 440 hz frequency
+                </button>
 
-    <!--Info text-->
-    <p class="mt-30">
-        Clicking the button plays the frequency sound of 440 hertz for 1 second.</p>
-    <p>It is the pitch standard - the musical note of A above middle C, A4.</p>
+                <!--Info text-->
+                <p class="mt-30">
+                    Clicking the button plays the frequency sound of 440 hertz for 1 second.</p>
+                <p>It is the pitch standard - the musical note of A above middle C, A4.</p>
+            </div>
+        </div>
 
-    <!--Utilises same script as frequency piano-->
-    <script src="../js/frequencyPianoScript.js"></script>
+        <!--Utilises same script as frequency piano-->
+        <script src="../js/frequencyPianoScript.js"></script>
 </body>
 
 </html>
