@@ -178,18 +178,18 @@ h6, h3 {
 
 
 /*Log in*/
-.loginContainer {
+.loginRegisterContainer {
     flex: 1;
     display: flex;
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100vh;
-    background-image: url('../../public/assets/pianoLoginBG.jpg');
+    background-image: url('/assets/pianoLoginBG.jpg');
     background-size: 100% 140%;
 }
 
-.loginFormContainer {
+.formContainer {
     background-color: #ebf2f2c1;
     padding: 20px;
     margin: 50px 5px 5px 10px;
@@ -200,16 +200,16 @@ h6, h3 {
     margin-right: 0;
 }
 
-#loginForm, h3 {
+#loginRegisterForm, h3 {
     margin-top: 40px;
 }
-.loginFormContainer label {
+.formContainer label {
     display: block;
     color: #2D1674;
     margin: 30px 10px 10px 15%;
 }
 
-.loginFormContainer input {
+.formContainer input {
     width: 70%;
     padding: 8px;
     box-sizing: border-box;
@@ -217,7 +217,17 @@ h6, h3 {
     margin: 10px auto 10px auto;
 }
 
-.loginFormContainer button {
+.registerRedirect, .loginRedirect {
+    text-decoration: none;
+    padding-top: 20px;
+    color: #607777;
+}
+.registerRedirect:hover, .loginRedirect:hover {
+    color:#96aeae;
+    transition: 0.5s;
+}
+
+#registerBtn, #loginBtn {
     background-color: #bfd6d6;
     color: #ffffff;
     padding: 10px;
@@ -226,10 +236,10 @@ h6, h3 {
     border-radius: 6px;
     cursor: pointer;
     display: block;
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
     transition: background-color 0.6s;
 }
 
-.loginFormContainer button:hover {
+#registerBtn:hover, #loginBtn:hover {
     background-color: #b5c4c4;
 }

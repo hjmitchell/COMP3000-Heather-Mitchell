@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>PianoStudio</title>
     <!--Favicon, stylesheets, scripts-->
-    <link rel="shortcut icon" type="image/png" href="../../public/assets/grand-piano.png" />
+    <link rel="shortcut icon" type="image/png" href="/assets/grand-piano.png" />
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script src="../js/scripts.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/practiceTools.css">
@@ -21,23 +21,30 @@
 <body>
     <!--Navbar-->
     <div id="navbar-container"></div>
+
     <!--Login container-->
-    <div class="loginContainer">
-        <div class="loginFormContainer">
+    <div class="loginRegisterContainer">
+        <div class="formContainer">
             <h3>Log in</h3>
-            <form id="loginForm">
+            <!--Form-->
+            <form id="loginRegisterForm">
                 <!--Username-->
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
                 <!--Password-->
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
-                <!--Log in btn-->
-                <button type="button" onclick="login()">Log in</button>
+                <!--Login btn-->
+                <input type="submit" id="loginBtn" value="Log in">
+
+                <!--Register link-->
+                <p style="text-align:center" class="registerRedirect">
+                <a href="/src/html/register.html" class="registerRedirect">
+                    Don't have an account?<br>Click here to register</a>
+                </p>
             </form>
         </div>
     </div>
-
 </body>
 
 </html>

@@ -11,7 +11,7 @@ body { /*Font*/
     width: 100%;
     height: 100vh;
     text-align: center;
-    background-image: url('../../public/assets/pianoBGBlur.png') !important;
+    background-image: url('/assets/pianoBGBlur.png') !important;
     background-size: 100% 140%;
     padding-left: 10%;
 }

@@ -65,7 +65,7 @@ startBtn.addEventListener('click', async () => {
                 frequencyValue.textContent = frequencyHz.toFixed(2) + " Hz";
 
                 //Fetch and parse JSON data for note conversion
-                fetch('/public/assets/frequencyDetectorData.json') //Network request
+                fetch('/assets/frequencyDetectorData.json') //Network request
                     .then((response) => response.json()) //Extracts data and parses response body as JSON
                     .then((data) => { //Assign parsed JSON to var
                         noteFrequencyData = data;
