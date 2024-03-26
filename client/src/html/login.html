@@ -39,12 +39,48 @@
 
                 <!--Register link-->
                 <p style="text-align:center" class="registerRedirect">
-                <a href="/src/html/register.html" class="registerRedirect">
-                    Don't have an account?<br>Click here to register</a>
+                    <a href="/src/html/register.html" class="registerRedirect">
+                        Don't have an account?<br>Click here to register</a>
                 </p>
             </form>
         </div>
     </div>
+
+    <script>
+        //Handle form submission
+        document.getElementById('loginRegisterForm').addEventListener('submit', function (event) {
+            //Prevent default form submission
+            event.preventDefault();
+
+            //Get form user info.
+            const userLoginInfo = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+
+            //Send POST request with JSON payload
+            fetch('/user/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userLoginInfo)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        //Log in successful, redirect to home
+                        document.location.href = "http://localhost:8080/src/html/index.html";
+                    } else {
+                        //Log in failed
+                        alert('Log in failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred during log in');
+                });
+        });
+    </script>
 </body>
 
 </html>
