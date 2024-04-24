@@ -8,9 +8,9 @@
     <nav>
         <ul class="navContainer">
             <!--Logo and Title-->
-            <img src="/assets/pslogotransparent.png" alt="" width="50" class="logo"/>
+            <img src="/assets/pslogotransparent.png" alt="" width="50" class="logo" />
             <a class="title" href="./index.html">PianoStudio</a>
-            
+
             <!--Nav Links-->
             <li><a class="navHeader" href="./index.html">Home</a></li>
             <li><a class="navHeader" href="./research.html">Research</a></li>
@@ -40,10 +40,27 @@
     </nav>
     <div>
         <!--Sign in-->
-        <button class="logInBtn" type="submit" onclick="location.href='/src/html/login.html'">
+        <button class="logInBtn" type="submit" id="changeBtn" onclick="changeBtn()">
             Log in
         </button>
     </div>
+
+    <script>
+        //location.href='/src/html/login.html';
+        //this.innerHTML='Close Curtain'
+
+        function changeBtn() {
+            alert("hi")
+            var btn = document.getElementById("btnChange");
+            if (btn.innerHTML.trim() === "Log in") {
+                btn.innerHTML = "Logging in...";
+            } else {
+                btn.innerHTML = "Log in";
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>
