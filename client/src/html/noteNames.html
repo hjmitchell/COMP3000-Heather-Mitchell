@@ -28,19 +28,19 @@
 
       <!--Piano with key buttons-->
       <div id="piano">
-        <button class="whiteKey" onclick="playSound(261.63); checkNote('C')"></button>
-        <button class="blackKey" onclick="playSound(277.18); checkNote('C#')"></button>
-        <button class="whiteKey" onclick="playSound(293.66); checkNote('D')"></button>
-        <button class="blackKey" onclick="playSound(311.13); checkNote('D#')"></button>
-        <button class="whiteKey" onclick="playSound(329.63); checkNote('E')"></button>
-        <button class="whiteKey" onclick="playSound(349.23); checkNote('F')"></button>
-        <button class="blackKey" onclick="playSound(369.99); checkNote('F#')"></button>
-        <button class="whiteKey" onclick="playSound(392); checkNote('G')"></button>
-        <button class="blackKey" onclick="playSound(412.3); checkNote('G#')"></button>
-        <button class="whiteKey" onclick="playSound(440); checkNote('A')"></button>
-        <button class="blackKey" onclick="playSound(466.16); checkNote('A#')"></button>
-        <button class="whiteKey" onclick="playSound(493.88); checkNote('B')"></button>
-        <button class="whiteKey" onclick="playSound(523.25); checkNote('C')"></button>
+        <button class="whiteKey" onclick="playNoteSound(261.63); checkNote('C')"></button>
+        <button class="blackKey" onclick="playNoteSound(277.18); checkNote('C#')"></button>
+        <button class="whiteKey" onclick="playNoteSound(293.66); checkNote('D')"></button>
+        <button class="blackKey" onclick="playNoteSound(311.13); checkNote('D#')"></button>
+        <button class="whiteKey" onclick="playNoteSound(329.63); checkNote('E')"></button>
+        <button class="whiteKey" onclick="playNoteSound(349.23); checkNote('F')"></button>
+        <button class="blackKey" onclick="playNoteSound(369.99); checkNote('F#')"></button>
+        <button class="whiteKey" onclick="playNoteSound(392); checkNote('G')"></button>
+        <button class="blackKey" onclick="playNoteSound(412.3); checkNote('G#')"></button>
+        <button class="whiteKey" onclick="playNoteSound(440); checkNote('A')"></button>
+        <button class="blackKey" onclick="playNoteSound(466.16); checkNote('A#')"></button>
+        <button class="whiteKey" onclick="playNoteSound(493.88); checkNote('B')"></button>
+        <button class="whiteKey" onclick="playNoteSound(523.25); checkNote('C')"></button>
       </div>
 
       <!--Random note button, note to play, feedback, score-->
@@ -48,7 +48,7 @@
         <div class="row">
           <!-- Score on the left -->
           <div class="col-md-4">
-            <p id="score">Score:</p>
+            <p id="noteScore">Score:</p>
             <p id="greenScore">0</p>
           </div>
 
