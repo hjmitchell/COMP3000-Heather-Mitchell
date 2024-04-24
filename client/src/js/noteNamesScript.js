@@ -1,5 +1,5 @@
 //Function to play sound with specified frequency and duration
-const playSound = (frequency, duration = 700) => {
+const playNoteSound = (frequency, duration = 700) => {
     //Create AudioContext to create and execute audio
     const audioCtx = new AudioContext();
     //Create gain node to create and control volume
@@ -47,7 +47,7 @@ const getRandomNote = () => {
 let isButtonEnabled = true;
 
 //Store user score, initialised as 0
-let score = 0;
+let noteScore = 0;
 
 //Get random note function
 const playThisNoteBtn = () => {
@@ -66,7 +66,7 @@ const playThisNoteBtn = () => {
     //Display note on screen
     document.getElementById("note").innerHTML = `${currentRandomNote.name}`;
     //Play required note for 0.5 seconds
-    playSound(currentRandomNote.frequency, 500);
+    playNoteSound(currentRandomNote.frequency, 500);
 
     //Clear feedback element for next note, leaving empty space
     document.getElementById("feedback").innerHTML = `<br>`;
@@ -82,13 +82,13 @@ const checkNote = (pressedKey) => {
     if (pressedKey == currentRandomNote.name) {
         feedbackElement.innerHTML = "Correct! Well done!";
         //Increment score if correct
-        score += 1;
+        noteScore += 1;
     } else {
         feedbackElement.innerHTML = `Incorrect. You played ${pressedKey}`;
     }
 
     //Update scoreboard
-    scoreElement.innerHTML = `${score}`;
+    scoreElement.innerHTML = `${noteScore}`;
     //Enable button after checking note
     document.getElementById("clickRandNote").disabled = false;
     isButtonEnabled = true;
