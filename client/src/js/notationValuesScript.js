@@ -64,7 +64,7 @@ function startSound() {
 
 
 //Play sound for specified duration function - used in note value functions to produce sound
-const playSound = (duration) => {
+const playFreqSound = (duration) => {
     //Create AudioContext to create and execute audio
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     //Create gain node to create and control volume
@@ -94,7 +94,7 @@ const playSound = (duration) => {
 function semibrave() {
     switch (clickCount) {
         case 5:
-            playSound(2400, 329.63);
+            playFreqSound(2400, 329.63);
             break;
         case 8:
             clickCount = 0;
@@ -106,7 +106,7 @@ function minim() {
     switch (clickCount) {
         case 5:
         case 7:
-            playSound(750, 329.63);
+            playFreqSound(750, 329.63);
             break;
         case 8:
             clickCount = 0;
@@ -119,11 +119,11 @@ function crotchet() {
         case 5:
         case 6:
         case 7:
-            playSound(300, 329.63);
+            playFreqSound(300, 329.63);
             break;
         case 8:
             clickCount = 0;
-            playSound(300, 329.63);
+            playFreqSound(300, 329.63);
             break;
     }
 }
@@ -133,16 +133,16 @@ function quaver() {
         case 5:
         case 6:
         case 7:
-            playSound(160, 329.63);
+            playFreqSound(160, 329.63);
             setTimeout(() => {
-                playSound(160, 329.63);
+                playFreqSound(160, 329.63);
             }, 250);
             break;
         case 8:
             clickCount = 0;
-            playSound(160, 329.63);
+            playFreqSound(160, 329.63);
             setTimeout(() => {
-                playSound(160, 329.63);
+                playFreqSound(160, 329.63);
             }, 250);
             break;
     }
@@ -153,28 +153,28 @@ function semiquaver() {
         case 5:
         case 6:
         case 7:
-            playSound(80, 329.63);
+            playFreqSound(80, 329.63);
             setTimeout(() => {
-                playSound(80, 329.63);
+                playFreqSound(80, 329.63);
             }, 130);
             setTimeout(() => {
-                playSound(80, 329.63);
+                playFreqSound(80, 329.63);
             }, 260);
             setTimeout(() => {
-                playSound(80, 329.63);
+                playFreqSound(80, 329.63);
             }, 390);
             break;
         case 8:
             clickCount = 0;
-            playSound(80, 329.63);
+            playFreqSound(80, 329.63);
             setTimeout(() => {
-                playSound(80, 329.63);
+                playFreqSound(80, 329.63);
             }, 130);
             setTimeout(() => {
-                playSound(80, 329.63);
+                playFreqSound(80, 329.63);
             }, 260);
             setTimeout(() => {
-                playSound(80, 329.63);
+                playFreqSound(80, 329.63);
             }, 390);
             break;
     }
