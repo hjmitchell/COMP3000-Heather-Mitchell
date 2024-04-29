@@ -1,4 +1,4 @@
-const playSound = (frequency, duration = 700) => {
+const playSound = (frequency, duration = 400) => {
     //Create AudioContext to create and execute audio
     const audioCtx = new AudioContext();
     //Create gain node to create and control volume

@@ -28,7 +28,7 @@ body { /*Font*/
 #displayContainer2 { /*Container to center content after table*/
     text-align: center;
     font-family: 'Rethink Sans', sans-serif;
-    width: 70%;
+    width: 90%;
     padding-top: 25px;
     padding-bottom: 30px;
 }
@@ -150,7 +150,7 @@ body { /*Font*/
 
 #displayContainer { /*Center elements under piano*/
     text-align: center;
-    width: 50%;
+    width: 80%;
     font-family: 'Rethink Sans', sans-serif;
     padding-top: 20px;
 }
@@ -165,7 +165,9 @@ body { /*Font*/
 #clickRandNote:hover {
     background-color: #95b5b5 !important;
 }
-
+#greenScore {
+    padding-left: 80px;
+}
 #note {
     font-weight: 500;
     font-size: 30px;
