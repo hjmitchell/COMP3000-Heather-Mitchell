@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
-<body>
+<body onload="checkLoginStatus()">
     <nav>
         <ul class="navContainer">
             <!--Logo and Title-->
@@ -41,9 +41,7 @@
     <div>
         <!--Sign in-->
         <a href="./login.html">
-            <button class="logInBtn" type="submit" id="changeBtn" onclick="changeBtn()">
-                Log in
-            </button>
+            <button class="logInBtn" type="submit" id="changeBtn" onclick="logout()"></button>
         </a>
     </div>
 </body>

@@ -58,6 +58,7 @@
                 password: document.getElementById('password').value
             };
 
+            //LOG IN
             //Send POST request with JSON payload
             fetch('/user/login', {
                 method: 'POST',
@@ -68,9 +69,24 @@
             })
                 .then(response => {
                     if (response.ok) {
-                        alert('Logged in. Welcome to PianoStudio!')
+                        //Get username and capitalise first letter for welcome msg
+                        //Get username
+                        const name = document.getElementById('username').value;
+                        //Get first letter
+                        const firstLetter = name.charAt(0);
+                        //First letter uppercase
+                        const firstLetterCap = firstLetter.toUpperCase();
+                        //Get remaining letters from username
+                        const remainingLetters = name.slice(1);
+                        //Join name together
+                        const capitalisedName = firstLetterCap + remainingLetters;
+
+                        //Welcome message, personalised/capitalised
+                        alert(`Logged in. Welcome to PianoStudio, ${capitalisedName}`)
                         //Log in successful, redirect to home
                         document.location.href = "http://localhost:8080/src/html/index.html";
+                        //Set log in validation cookie
+                        document.cookie = "loggedIn=true; path=/";
                     } else {
                         //Log in failed
                         alert('Log in failed');

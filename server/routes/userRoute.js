@@ -72,8 +72,10 @@ router.post("/login", async (request, response) => {
 
         //Create JsonWebToken by passing user ID and JWT secret
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '3d' }); 
+        
         //Set JWT as cookie, expiring in 3 days
-        response.cookie('token', token, { httpOnly: true, maxAge: 3 * 24 * 60 * 60 * 1000 });
+        response.cookie('token', token, { httpOnly: false, maxAge: 3 * 24 * 60 * 60 * 1000 });
+
         response.json({
             token, user: {
                 id: user._id,
@@ -86,8 +88,10 @@ router.post("/login", async (request, response) => {
     }
 });
 
-//CHECK IF USER ALREADY LOGGED IN
-
-
 //LOG OUT
-//Clear cookie token
+router.post("/logout", (request, response) => {
+    //Clear token cookie by setting expiration date to past
+    response.cookie('token', '', { expires: new Date(0), httpOnly: false });
+    //Response
+    response.status(200).json({ msg: "Log out successful" });
+});
