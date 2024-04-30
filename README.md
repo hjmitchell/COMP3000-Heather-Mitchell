@@ -1,6 +1,6 @@
 # COMP3000 PianoStudio
 
-Link to video demo: https://youtu.be/FfTKUTLyCZE?si=BAeqmIp_gDgGQcwn
+Link to video demo: https://www.youtube.com/watch?v=t_XfwhKGMGA
 
 ### About
 PianoStudio is a research-backed interactive full-stack web application, designed for use by piano teachers and students.
